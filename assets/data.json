@@ -2,11 +2,13 @@
     "home": {
       "title": "Pranav Dubey",
       "subtitle": "Frontend  Web Developer",
-      "buttonText": "Visit My Work"
+      "buttonText": "Visit My Work",
+      "image":"assets/img/home-right.png"
     },
     "about": {
       "title": "let's<br>introduce about<br>myself",
-      "description": "I am a <b>Frontend Developer</b> with skills in <b>HTML, CSS, JavaScript, Bootstrap, TypeScript, and Angular 18</b>. Currently, I am learning Angular 18 and developing projects to strengthen my expertise. I enjoy creating visually appealing and user-friendly web applications with clean and efficient code. Passionate about learning, I constantly explore new technologies and best practices to improve my development skills.<br>I am excited to collaborate on projects where I can apply my knowledge and grow as a developer. Let's build something great together!"
+      "description": "I am a <b>Frontend Developer</b> with skills in <b>HTML, CSS, JavaScript, Bootstrap, TypeScript, and Angular 18</b>. Currently, I am learning Angular 18 and developing projects to strengthen my expertise. I enjoy creating visually appealing and user-friendly web applications with clean and efficient code. Passionate about learning, I constantly explore new technologies and best practices to improve my development skills.<br>I am excited to collaborate on projects where I can apply my knowledge and grow as a developer. Let's build something great together!",
+       "image":"assets/img/about-us.png"
     },
     "projects": [
       {
