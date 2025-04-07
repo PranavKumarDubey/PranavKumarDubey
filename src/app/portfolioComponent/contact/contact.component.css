@@ -1,0 +1,108 @@
+.title{
+    padding-top: 15px;
+    font-weight: 600;
+    color: #fff;
+}
+.title span::before,
+.title span::after {
+    content: " ";
+    width:100px;
+    height:4px;
+    display: inline-block;
+    background-color:#ffffff;
+    margin: 10px;
+    vertical-align: middle;
+}
+.contact-info{
+    color: #fff;
+}
+.contact-info p {
+    font-size:1rem;
+}
+.contact-info .contact-icon{
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+    display:flex;
+    align-items:center;
+}
+.contact-info .contact-icon > span {
+    color:#0ef;
+    font-size:2.6rem;
+    margin-right:1.2rem;
+}
+.contact-info .contact-icon h3{
+    font-size:1rem;
+    font-weight:400;
+}
+.contact-info .contact-icon .text{
+    font-size:1rem;
+    line-height: 1.7;
+}
+
+.contact-info .contact-social-links{
+    display: flex;
+}
+.contact-info .contact-social-links a{
+    display:block;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    background: #252525;
+    margin: 0 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+}
+.contact-info .contact-social-links a:first-child{
+
+    margin-left: 0; 
+}
+.contact-info .contact-social-links a:hover{
+    background: #0ef;
+}
+
+.contact-form input , .contact-form textarea  {
+    background: #252525;
+    border:none !important;
+    border: 2px solid transparent;
+    font-size:1rem;
+    outline:0;
+    caret-color:#fff;
+    color: #ffff;
+}
+.contact-form input:focus , .contact-form textarea:focus{
+    border-color:#0ef;
+}
+.contact-form label{
+    font-size: 1.2rem; 
+    color: #fff;
+    font-weight: 400;
+}
+
+.btn{
+    border: none;
+    margin: 1rem 0;
+    border-radius: 35px;
+    background-color: #0ef;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor:pointer;
+    transition: all 0.4s ease;
+    display: inline-block;
+}
+.btn:hover{
+    opacity:0.7;
+}
+
+@media only screen and (min-width:200px) and (max-width:575px){
+
+.title span::before,
+.title span::after{
+    width:30px;
+    height:2px;
+}
+
+}

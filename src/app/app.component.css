@@ -1,0 +1,17 @@
+/* Animation as Global Background */
+.animation {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #111;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.main-content {
+    position: relative;
+    z-index: 1; 
+    min-height: 100vh;
+}

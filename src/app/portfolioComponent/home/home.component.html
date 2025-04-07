@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <div class="container py-lg-5 py-3">
+      <div class="row d-flex align-items-center">
+        <!-- Image Section (Moves to top on small screens) -->
+        <div class="col-lg-6 col-12 py-lg-4 py-md-5 py-sm-5 order-1 order-lg-2 d-flex justify-content-center">
+          <div class="img-container">
+            <img src="/assets/img/home-right.png" alt="home-img" class="img-fluid w-100">
+          </div>
+        </div>
+        <!-- Header Content Section -->
+        <div class="col-lg-6 col-12 header order-2 order-lg-1 text-center text-start text-lg-start">
+          <h1>HI! <br> I'm <span>{{ homeData?.title }}</span></h1>
+          <h2 data-text="FRONTEND WEB DEVELOPER" class="header-subtitle">{{ homeData?.subtitle }}</h2>
+          <button class="btn btn-primary mt-3 px-4 py-2" (click)="navigateToProjetc()">
+            {{ homeData?.buttonText }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

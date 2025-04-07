@@ -1,0 +1,124 @@
+/* Navbar */
+.navbar {
+    position: fixed; /* Keeps it fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8); /* Slightly transparent background */
+    padding: 10px 20px;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 10px;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0ef; 
+}
+
+/* Underline Effect */
+.navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #0ef;
+    transition: all 0.6s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover::before,
+.navbar-nav .nav-link.active::before {
+    width: 100%;
+}
+
+/* Active Link Color */
+.navbar-nav .nav-link.active {
+    color: #0ef !important;
+}
+
+/* Logo */
+.custom-navbar .logo {
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    margin-left: 20px;
+}
+
+/* Adjust navbar alignment */
+#navbarNav {
+    margin-left: auto; /* Pushes nav items to the right */
+}
+
+/* Navbar Toggle Button */
+.navbar-toggler {
+    border: 2px solid #0ef; /* Changes border color */
+    padding: 5px 8px;
+}
+
+.navbar-toggler-icon {
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+/* Changing the toggle button icon color */
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    background-color: #0ef;
+}
+
+/* Responsive Navbar */
+@media (max-width: 1024px) {
+    
+    .navbar {
+        background-color: #000; 
+        
+    #navbarNav {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar-nav {
+        text-align: center;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .navbar-nav .nav-link {
+        display: block;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .custom-navbar .logo {
+        margin-left: 0;
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-navbar .logo {
+        font-size: 24px;
+    }
+
+    .navbar-toggler {
+        padding: 4px 6px;
+    }
+}

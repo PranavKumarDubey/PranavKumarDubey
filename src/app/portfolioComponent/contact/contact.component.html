@@ -1,0 +1,62 @@
+<header class="container-fluid py-5 ">
+  <div class = " container  text-center ">
+    <h1 class="title">
+        <span>Get In Touch</span>
+    </h1>
+  </div>
+</header>
+<section class="container-fluid py-lg-2 py-sm-4 py-3">
+  <div class="container">
+    <div class="row justify-content-between ">
+      <div class="col-lg-6 contact-info">
+        <h2>Feel Free To Ask Me!</h2>
+        <p class="text">Feel free to reach out for job opportunities, or just to say hi! I'm always excited to connect
+          with like-minded professional.</p>
+        <div class="contact-icon">
+          <span><i class="fas fa-envelope-open"></i></span>
+          <h3>
+            <span class="text">Mail Me</span> <br>
+            {{ contactData.email }}
+          </h3>
+        </div>
+        <div class="contact-icon">
+          <span><i class="fas fa-phone-square-alt"></i></span>
+          <h3>
+            <span class="text">Call Me</span> <br>
+            {{ contactData.phone}}
+          </h3>
+        </div>
+        <div class="contact-social-links">
+          <a [href]="contactData.linkedin" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a [href]="contactData.github" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-5  py-md-1 py-sm-4 py-3 ">
+        <form [formGroup]="contactForm" class="contact-form" (ngSubmit)="onSubmit()">
+          <div class="mb-2">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" formControlName="name" id="exampleFormControlInput1" placeholder="Name">
+          </div>
+          <div class="mb-2">
+            <label class="form-label">Subject</label>
+            <input type="text" class="form-control" formControlName="email" id="exampleFormControlInput2" placeholder="Subject">
+          </div>
+          <div class="mb-2">
+            <label class="form-label">Email address</label>
+            <input type="email" class="form-control" formControlName="subject" id="exampleFormControlInput3" placeholder="name@example.com">
+          </div>
+          <div class="mb-2">
+            <label class="form-label">Message</label>
+            <textarea class="form-control" formControlName="message" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <button type = "submit" class = "btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

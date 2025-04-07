@@ -1,0 +1,40 @@
+<div class="container-fluid projects">
+  <div class="container">
+    <div class="row">
+      <div class="project-heading">
+        <div class="projects-about mt-5 text-center">
+          <h1>Projects</h1>
+          <p class="bold-text">Here are some of the projects I have worked on.</p>
+        </div>
+      </div>
+  <div class="container">
+    <div class=" row justify-content-center">
+      <div class="img-carousel  col-12 col-sm-10 col-md-8  ">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div *ngFor="let project of projectsData; let i = index" class="carousel-item" data-bs-interval="3000"
+              [ngClass]="{'active': i === 0}">
+              <img [src]="project.image" class="d-block w-100 img-fluid" alt="{{ project.title }}">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>{{ project.title }}</h5>
+                <p>{{ project.tech }}</p>
+                <a [href]="project.link" target="_blank">View Project</a>
+    
+              </div>
+            </div>
+          </div>
+    
+          <button class="custom-prev-btn arrow-sm d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span><i class="fa-solid fa-arrow-left"></i></span>
+          </button>
+          
+          <button class="custom-next-btn arrow-sm d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span><i class="fa-solid fa-arrow-right"></i></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
