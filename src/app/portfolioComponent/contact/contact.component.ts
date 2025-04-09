@@ -1,10 +1,11 @@
 import { Component , OnInit} from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { FormGroup, ReactiveFormsModule,FormControl, Validators } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })

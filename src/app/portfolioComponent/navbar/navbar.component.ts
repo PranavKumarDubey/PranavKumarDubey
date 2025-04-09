@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild  } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
@@ -8,5 +8,14 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+  
+  @ViewChild('navCollapse') navCollapse!: ElementRef;
+
+  closeNavbar() {
+    const navbarEl = this.navCollapse.nativeElement;
+    if (navbarEl.classList.contains('show')) {
+      navbarEl.classList.remove('show');
+    } 
+  }
 
 }

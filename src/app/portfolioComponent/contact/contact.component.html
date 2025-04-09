@@ -40,22 +40,40 @@
         <form [formGroup]="contactForm" class="contact-form" (ngSubmit)="onSubmit()">
           <div class="mb-2">
             <label class="form-label">Name</label>
-            <input type="text" class="form-control" formControlName="name" id="exampleFormControlInput1" placeholder="Name">
+            <input type="text" class="form-control" formControlName="name" placeholder="Name">
+            <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="text-danger">
+              Name is required (min 3 characters).
+            </div>
           </div>
+        
           <div class="mb-2">
             <label class="form-label">Subject</label>
-            <input type="text" class="form-control" formControlName="email" id="exampleFormControlInput2" placeholder="Subject">
+            <input type="text" class="form-control" formControlName="subject" placeholder="Subject">
+            <div *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched" class="text-danger">
+              Subject is required.
+            </div>
           </div>
+        
           <div class="mb-2">
             <label class="form-label">Email address</label>
-            <input type="email" class="form-control" formControlName="subject" id="exampleFormControlInput3" placeholder="name@example.com">
+            <input type="email" class="form-control" formControlName="email" placeholder="name@example.com">
+            <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="text-danger">
+              Enter a valid email address.
+            </div>
           </div>
+        
           <div class="mb-2">
             <label class="form-label">Message</label>
-            <textarea class="form-control" formControlName="message" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" formControlName="message" rows="3"></textarea>
+            <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="text-danger">
+              Message must be at least 10 characters.
+            </div>
           </div>
-          <button type = "submit" class = "btn">Send Message</button>
+        
+          <button type="submit" class="btn">Send Message</button>
         </form>
+        
+        
       </div>
     </div>
   </div>
